@@ -1,31 +1,30 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 
 const Footer = () => {
 
     return (
-        <div className='row p-3' style={{backgroundColor: 'rgb(2, 13, 48)' }}>
-                <div className='col-lg-1 col-6 col-sm-3 offset-lg-4'>
-                    <center>
-                    <NavLink className=' nav-link ' id='social' to='#'  >GITHUB</NavLink>
-                    </center>
-                </div>
-                <div className='col-lg-1 col-6 col-sm-3'>
-                    <center>
-                <NavLink className=' nav-link ' id='social' to='#'  >LINKEDIN</NavLink>
-                </center>
-                </div>
-                <div className='col-lg-1 col-6 col-sm-3'>
+        <div className='row p-3' style={{ backgroundColor: 'rgb(2, 13, 48)' }}>
+            <div className='col-lg-1 col-6 col-sm-3 offset-lg-4'>
                 <center>
-                <NavLink className=' nav-link ' id='social' to='#' >INSTAGRAM</NavLink>
+                    <a className=' nav-link ' id='social' target='_blank' href='https://github.com/Minekar-Rajat'  >GITHUB</a>
                 </center>
-                </div>
-                <div className='col-lg-1 col-6 col-sm-3'>
+            </div>
+            <div className='col-lg-1 col-6 col-sm-3'>
                 <center>
-                <NavLink className=' nav-link ' id='social' to='#' >TWITTER</NavLink>
+                    <a className=' nav-link ' id='social' target='_blank' href='https://www.linkedin.com/in/minekarrajat/'  >LINKEDIN</a>
                 </center>
-                </div>
-                
+            </div>
+            <div className='col-lg-1 col-6 col-sm-3'>
+                <center>
+                    <a className=' nav-link ' id='social' target='_blank' href='https://www.instagram.com/rajatminekar/' >INSTAGRAM</a>
+                </center>
+            </div>
+            <div className='col-lg-1 col-6 col-sm-3'>
+                <center>
+                    <a className=' nav-link ' target='_blank' id='social' href='https://twitter.com/MinekarRajat' >TWITTER</a>
+                </center>
+            </div>
+
         </div>
     );
 }
