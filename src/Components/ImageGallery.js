@@ -12,7 +12,7 @@ const ImageGallery = (props) => {
 
     function getGallery(v) {
 
-        axios.get("https://images-api.nasa.gov/search?media_type=image" + "&q=" + v)
+        axios.get("https://images-api.nasa.gov/search?media_type=image&q=" + v)
             .then((res) => setGallery(res.data.collection.items))
             .catch((err) => console.log(err));
     }
@@ -56,7 +56,7 @@ const ImageGallery = (props) => {
                         <Fade bottom>
                             <div className='pics p-2 shadow  ' >
 
-                                <img src={l.href} className='rounded' style={{ width: '100%' }} />
+                                <img src={l.href} alt='gallery-pic' className='rounded' style={{ width: '100%' }} />
 
                                 <center>
                                     <b style={{ color: 'whitesmoke' }}> {g.data[0].title.split('- Video')[0]}</b>

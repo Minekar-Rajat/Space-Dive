@@ -2,8 +2,6 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Button, Form, Input, InputGroup } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import { setGlobalCssModule } from 'reactstrap/es/utils';
 import CloseIcon from '@material-ui/icons/Close';
 import { Fade } from 'react-reveal';
 
@@ -20,7 +18,7 @@ const Mars = () => {
 
     function getRover(v) {
         var c;
-        if (v == '') {
+        if (v === '') {
             c = v;
         }
         else {
@@ -64,7 +62,7 @@ const Mars = () => {
             return (
                 <Fade bottom>
                     <div className='pics p-2 shadow' onClick={() => getImg(r)}>
-                        <img src={r.img_src} className='rounded' style={{ width: '100%' }} />
+                        <img src={r.img_src} alt='mars-pic' className='rounded' style={{ width: '100%' }} />
                     </div>
                 </Fade>
             );
@@ -83,7 +81,7 @@ const Mars = () => {
                                 <h1 className='text-1'>Rover : {tempimgObj.rover.name}</h1>
                                 <hr />
 
-                                <img src={tempimgObj.img_src} style={{ maxHeight: '80vh' }} className='img-fluid rounded' />
+                                <img src={tempimgObj.img_src} alt='modal-pic' style={{ maxHeight: '80vh' }} className='img-fluid rounded' />
 
                                 <h1 className='text-2'>Camera : {tempimgObj.camera.full_name}</h1>
                                 <h1 className='text-3'>Date : {tempimgObj.earth_date}</h1>

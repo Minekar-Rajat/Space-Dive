@@ -12,7 +12,7 @@ const VideoGallery = (props) => {
 
     function getGallery(v) {
 
-        axios.get("https://images-api.nasa.gov/search?media_type=video" + "&q=" + v)
+        axios.get("https://images-api.nasa.gov/search?media_type=video&q=" + v)
             .then((res) => setGallery(res.data.collection.items))
             .catch((err) => console.log(err));
     }

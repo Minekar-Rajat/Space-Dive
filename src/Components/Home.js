@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Form, Input, InputGroup } from 'reactstrap';
-import Fade, { Rotate, Zoom } from 'react-reveal';
+import Fade, { Zoom } from 'react-reveal';
 import '../App.css';
 
 const Home = () => {
@@ -68,7 +68,7 @@ const Home = () => {
 
     if (capture == null || epic == null || weather == null) {
         return (
-            <div className='p-4' style={{ height: ' ' }}>
+            <div className='p-4' style={{ height: '80vh' }}>
                 <center>
                     <div class="spinner-border " role="status" style={{ marginTop: "25vh", fontSize: '50%' }}>
                         <span class="sr-only">Loading...</span>
@@ -124,7 +124,7 @@ const Home = () => {
                                 <br /><br /><br />
                                 <h1 className='text-1'>Planet Earth </h1>
                                 <hr style={{ color: 'white' }} />
-                                <img src={'https://api.nasa.gov/EPIC/archive/natural/' + epic.date.split('-')[0] + '/' + epic.date.split('-')[1] + '/' + epic.date.split('-')[2].split(' ')[0] + '/png/' + epic.image + '.png?api_key=' + key} style={{ maxWidth: '100%', width: '500px' }} />
+                                <img src={'https://api.nasa.gov/EPIC/archive/natural/' + epic.date.split('-')[0] + '/' + epic.date.split('-')[1] + '/' + epic.date.split('-')[2].split(' ')[0] + '/png/' + epic.image + '.png?api_key=' + key} alt='Earth-Pic' style={{ maxWidth: '100%', width: '500px' }} />
                                 <br />
                                 <i style={{ color: 'whitesmoke', fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}>{epic.caption + " At " + epic.date} </i>
                                 <br /><br /><br />

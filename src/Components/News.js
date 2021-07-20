@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, CardText, CardTitle } from 'reactstrap';
-import { Stagger, Fade, FadeTransform } from 'react-animation-components';
+import { Stagger, Fade } from 'react-animation-components';
 import { Zoom } from 'react-reveal';
 
 
@@ -51,7 +51,7 @@ const News = () => {
                     <div className='row shadow-lg   my-5 p-0 cardbody'>
                         <div className='col-12 col-lg-6'>
                             <center>
-                                <img src={n.imageUrl} className='rounded shadow-lg' style={{ width: '500px', maxWidth: '100%' }} />
+                                <img src={n.imageUrl} alt='News-Pic' className='rounded shadow-lg' style={{ width: '500px', maxWidth: '100%' }} />
 
                             </center>
                         </div>
@@ -63,7 +63,7 @@ const News = () => {
                             </center>
                             <p style={{ float: 'right' }} className='p-4'> - {n.publishedAt.split('T')[0]}</p>
                             <div className=' p-3'>
-                                <a href={n.url} target='_blank'>
+                                <a href={n.url} rel="noreferrer" target='_blank'>
                                     <Button color='primary' style={{}} >Explore</Button>
                                 </a>
                             </div>

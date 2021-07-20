@@ -1,10 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router';
 import { Fade } from 'react-reveal';
 
 const Media = (props) => {
 
-    var location = useLocation();
+
 
     var media = props.media;
 
@@ -15,8 +14,8 @@ const Media = (props) => {
 
         var showMedia;
 
-        if (props.media.data[0].media_type == "image") {
-            showMedia = <img className='rounded img-fluid' src={media.links[0].href} />;
+        if (props.media.data[0].media_type === "image") {
+            showMedia = <img alt='media-pic' className='rounded img-fluid' src={media.links[0].href} />;
         }
         else {
             showMedia = <embed className='rounded' src={media.links[0].href.split('thumb')[0] + "orig.mp4"} style={{ maxHeight: '100%', height: '400px', maxWidth: '100%', width: '700px' }} />;
@@ -24,7 +23,7 @@ const Media = (props) => {
 
         return (
 
-            <div className='row' style={{ backgroundColor: 'black', color: 'whitesmoke' }} className='py-5'>
+            <div className='row py-5' style={{ backgroundColor: 'black', color: 'whitesmoke' }} >
                 <div className='col-10 offset-1'>
 
                     <center>
